@@ -1,0 +1,122 @@
+:root{
+    --bg:#d7e2f3;
+    --card:#ffffff;
+    --text: #222;
+    --muted:#666;
+    --border: #e0e0e0;
+    --primary: #2563eb;
+    --danger: #dc2626;
+    --success: #16a34a;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  article {
+    width: 100%;
+    max-width: 480px;
+    background: var(--card);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+
+  .completed h3 {
+    text-decoration: line-through;
+    color: var(--muted);
+  }
+
+  p {
+    margin: 8px 0;
+    color: var(--muted);
+  }
+
+  .badge {
+    padding: 4px 4px 4px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  .priority-high { background: #fee2e2; color: #b91c1c; }
+  .priority-medium { background: #fef3c7; color: #92400e; }
+  .priority-low { background: #dcfce7; color: #166534; }
+
+  .status {
+    margin-top: 4px;
+    display: inline-block;
+    font-size: 18px;
+  }
+
+  #status {
+    font-size: 15px;
+    margin: 4px 0;
+  }
+  .time {
+    font-size: 0.85rem;
+    margin-top: 6px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0;
+  }
+
+  .tag {
+    background: #eef2ff;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+  }
+
+  .actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  button {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #ced4d6;
+  }
+
+  .edit { background: var(--primary); color: white; }
+  .delete { background: var(--danger); color: white; }
+  #addbtn {
+    background-color: #2563eb;
+  }
+  button:focus, input:focus {
+    outline: 1px solid rgb(23, 57, 59);
+    outline-offset: 2px;
+  }
+
+  @media (max-width: 480px) {
+    article {
+      padding: 14px;
+    }
+  }

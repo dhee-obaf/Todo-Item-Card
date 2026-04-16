@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Todo Card</title>
+</head>
+<body>
+    <article data-testid="test-todo-card" id="card">
+        <div class="top">
+            <div>
+            <h3 
+            data-testid="test-todo-title" 
+            id="title">Finish UI Assignment
+            </h3>
+                <div 
+                data-testid="test-todo-priority-indicator" 
+                id="priorityIndicator">
+            </div>
+            <span 
+            class="badge priority-high"
+            data-testid="test-todo-priority" 
+            id="priority">High
+            </span>
+
+            <select class="dropdown" data-testid="test-todo-status-control" id="statusControl" aria-label="Task status">
+                <option>Pending</option>
+                <option>In Progress</option>
+                <option>Done</option>
+            </select>
+
+            <div  data-testid="test-todo-status" id="status" aria-label="Task status">Pending</div>
+            </div>
+
+            <div>
+            <input type="checkbox" 
+            id="checkbox" 
+            data-testid="test-todo-complete-toggle"/>
+            <label for="checkbox">Done</label>
+            </div>
+        </div>
+
+        <div>
+            <button 
+            data-testid="test-todo-expand-toggle"
+            aria-expanded="false"
+            aria-controls="desc">
+            Expand
+            </button>
+
+            <p id="desc" data-testid="test-todo-collapsible-section">
+            Build a responsive and accessible Todo Card component for testing. This is a long description to trigger collapse behavior.
+            </p>
+        </div>
+
+        <time data-testid="test-todo-due-date" id="due" datetime="2026-04-16T18:00:00Z">
+            Due April 16, 2026
+        </time>
+
+        <div data-testid="test-todo-time-remaining" id="time" aria-live="polite"></div>
+        <div data-testid="test-todo-overdue-indicator" id="overdue"></div>
+
+        <div 
+            class="tags"
+            data-testid="test-todo-tags"
+            role="list">
+            <span class="tag" data-testid="test-todo-tag-work">work</span>
+            <span class="tag" data-testid="test-todo-tag-urgent">urgent</span>
+            <span class="tag">design</span>
+        </div>
+
+        <button class="edit" 
+            data-testid="test-todo-edit-button" 
+            id="editBtn">Edit
+        </button>
+        <button class="delete" 
+            data-testid="test-todo-delete-button">Delete
+        </button>
+
+        <form data-testid="test-todo-edit-form" id="form" hidden>
+            <label>Title <input data-testid="test-todo-edit-title-input" id="editTitle"></label>
+            <label>Description <textarea data-testid="test-todo-edit-description-input" id="editDesc"></textarea></label>
+            <label>Priority 
+            <select data-testid="test-todo-edit-priority-select" id="editPriority">
+                <option>Low</option><option>Medium</option><option>High</option>
+            </select>
+            </label>
+            <label>Due 
+            <input type="datetime-local" data-testid="test-todo-edit-due-date-input" id="editDue">
+            </label>
+
+            <button type="submit" data-testid="test-todo-save-button">Save</button>
+            <button type="button" data-testid="test-todo-cancel-button" id="cancel">Cancel</button>
+        </form>
+
+        <button id="addBtn" style="display:none;" data-testid="test-todo-add-button">Add Task</button>      
+    </article>
+    <script src="./js/script.js"></script>
+</body>
+</html>
